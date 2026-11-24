@@ -342,6 +342,46 @@ ul.ast.tight { gap: 4px; }
 .ind span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
 .card p.indl { font-size: 13.5px; color: var(--ink); font-weight: 500; margin-top: -4px; }
 .card p.indl span { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-right: 8px; font-weight: 400; }
+
+/* where I fit graph */
+.fit-sub { margin-top: 18px; font-size: clamp(16px, 1.6vw, 19px); color: var(--muted); max-width: 820px; }
+.fit-sub span { margin: 0 8px; color: var(--line); }
+.graph { margin: 36px 0 0; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: clamp(16px, 3vw, 32px); overflow: hidden; position: relative; }
+.g-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+.nolimit { font-size: 15px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--paper); }
+.nolimit b { color: var(--verify); }
+.graph svg { width: 100%; height: auto; display: block; overflow: visible; }
+.graph .grid line { stroke: var(--line); stroke-dasharray: 3 6; }
+.graph .axis { stroke: var(--ink); stroke-width: 1.5; opacity: .5; }
+.graph .ceiling line { stroke: #E0A800; stroke-width: 2; stroke-dasharray: 8 6; }
+.graph .ceiling text { font-family: var(--f-mono); font-size: 12px; fill: #B08400; letter-spacing: .06em; text-transform: uppercase; }
+.graph .bar { fill: #2343FF; opacity: .07; transform-box: fill-box; transform-origin: bottom; animation: gbar 6s var(--ease) infinite; }
+.graph .area { fill: url(#ga); animation: garea 6s ease infinite; }
+.graph .line { fill: none; stroke: #2343FF; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1000; animation: gdraw 6s var(--ease) infinite; }
+.graph .runner { fill: #fff; stroke: #2343FF; stroke-width: 3; }
+.graph .nd { opacity: 1; }
+.graph .nd circle { fill: #fff; stroke: #2343FF; stroke-width: 3; }
+.graph .nd .halo { fill: none; stroke: #2343FF; stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: ghalo 2s ease-out infinite; }
+.graph .nd text { font-family: var(--f-display); font-weight: 700; font-size: 17px; fill: var(--ink); }
+.graph .burst { animation: gburst 6s var(--ease) infinite; opacity: 0; }
+.graph .burst circle, .graph .burst .tip { fill: #0A8558; }
+.graph .burst text { font-family: var(--f-display); font-weight: 800; font-size: 22px; fill: #0A8558; }
+.g-foot { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; margin-top: 10px; }
+.ticker { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.tk { display: flex; gap: 8px; width: max-content; animation: gtick 28s linear infinite; }
+.tk span { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+@keyframes gdraw { 0% { stroke-dashoffset: 1000; } 50%, 92% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 1000; } }
+@keyframes garea { 0%, 25% { opacity: 0; } 50%, 92% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes gbar { 0% { transform: scaleY(.15); } 45%, 92% { transform: scaleY(1); } 100% { transform: scaleY(.15); } }
+@keyframes gnode { 0%, 100% { opacity: 1; } }
+@keyframes ghalo { from { transform: scale(1); opacity: .6; } to { transform: scale(3); opacity: 0; } }
+@keyframes gburst { 0%, 46% { opacity: 0; transform: translateY(12px); } 54%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes gtick { to { transform: translateX(calc(-50% - 4px)); } }
+@media (max-width: 640px) { .graph .nd text { font-size: 24px; } .graph .burst text { font-size: 28px; } }
+@media (prefers-reduced-motion: reduce) {
+  .graph .line, .graph .area, .graph .bar, .graph .nd, .graph .burst, .tk, .graph .nd .halo { animation: none !important; opacity: 1 !important; stroke-dashoffset: 0 !important; transform: none !important; }
+  .graph .runner { display: none; }
+}
 </style>
 </head>
 <body>
@@ -420,14 +460,35 @@ ul.ast.tight { gap: 4px; }
   <section class="fit" id="fit">
     <div class="wrap">
       <div class="chap-label mono" data-reveal>Where I fit</div>
-      <h2 class="big" data-reveal>One profile, <em>five ways in.</em></h2>
-      <div class="fitgrid">
-        <div class="fc" data-reveal><span class="fn">01</span><b>Product</b><p>Strategy, roadmaps and discovery. Directed Akowe Legal X from concept to delivery, with Product School training in product strategy and product led growth.</p></div>
-        <div class="fc" data-reveal><span class="fn">02</span><b>Design</b><p>End to end UX, research and usability testing. Led the Akowe Issuance redesign for a 40% lift in core usability.</p></div>
-        <div class="fc" data-reveal><span class="fn">03</span><b>Management</b><p>Cross functional delivery. Guided teams through MVP strategy at IPME Consulting and set up the design operations Akowe runs on.</p></div>
-        <div class="fc" data-reveal><span class="fn">04</span><b>Analysis</b><p>Industrial Mathematics, Business Analytics, SQL and A/B testing. Built the dashboards behind 50% more data informed decisions at Grid.</p></div>
-        <div class="fc" data-reveal><span class="fn">05</span><b>Startups</b><p>Zero to one. Took Aimset and Trainly from discovery to launch ahead of target, started at Hebron Startup Lab, and joined BoostMate's first cohort.</p></div>
-      </div>
+      <h2 class="big" data-reveal>Building solutions with <em>data &amp; user research.</em></h2>
+      <p class="fit-sub" data-reveal>Design, Management, Strategy &amp; Analytics <span aria-hidden="true">|</span> Delivering across industries &amp; global markets.</p>
+
+      <figure class="graph" data-reveal aria-label="Illustration: an animated growth chart rising through user research, data, design, strategy, management and analytics, then breaking through its ceiling, labelled No limits.">
+        <div class="g-head">
+          <span class="mono">Impact</span>
+          <span class="nolimit"><b>No limits.</b> I strive in any industry.</span>
+        </div>
+        <svg viewBox="0 0 1000 420" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#2343FF"/><stop offset="1" stop-color="#0A8558"/></linearGradient>
+            <linearGradient id="ga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2343FF" stop-opacity=".18"/><stop offset="1" stop-color="#2343FF" stop-opacity="0"/></linearGradient>
+            <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0A8558"/></marker>
+          </defs>
+          <g class="grid"><line x1="30" x2="980" y1="100" y2="100"/><line x1="30" x2="980" y1="180" y2="180"/><line x1="30" x2="980" y1="260" y2="260"/><line x1="30" x2="980" y1="340" y2="340"/></g>
+          <g class="ceiling"><line x1="30" x2="830" y1="40" y2="40"/><line x1="930" x2="980" y1="40" y2="40"/><text x="34" y="30">the ceiling</text></g>
+          <rect class="bar" x="48" y="368" width="44" height="32" rx="6" style="animation-delay:0.20s"/><rect class="bar" x="188" y="336" width="44" height="64" rx="6" style="animation-delay:0.32s"/><rect class="bar" x="328" y="308" width="44" height="92" rx="6" style="animation-delay:0.44s"/><rect class="bar" x="468" y="254" width="44" height="146" rx="6" style="animation-delay:0.56s"/><rect class="bar" x="608" y="214" width="44" height="186" rx="6" style="animation-delay:0.68s"/><rect class="bar" x="748" y="150" width="44" height="250" rx="6" style="animation-delay:0.80s"/>
+          <path class="area" d="M30 380 L70 350 L210 318 L350 290 L490 236 L630 196 L770 132 L900 58 L968 6 L968 400 L30 400 Z"/>
+          <path class="line" id="growth" d="M30 380 L70 350 L210 318 L350 290 L490 236 L630 196 L770 132 L900 58 L968 6" pathLength="1000"/>
+          <circle class="runner" r="6"><animateMotion dur="6s" repeatCount="indefinite" rotate="auto"><mpath href="#growth"/></animateMotion></circle>
+          <g class="nd"><circle cx="70" cy="350" r="7"/><circle class="halo" cx="70" cy="350" r="7" style="animation-delay:0.35s"/><text x="70" y="328" text-anchor="middle">User research</text></g><g class="nd"><circle cx="210" cy="318" r="7"/><circle class="halo" cx="210" cy="318" r="7" style="animation-delay:0.77s"/><text x="210" y="296" text-anchor="middle">Data</text></g><g class="nd"><circle cx="350" cy="290" r="7"/><circle class="halo" cx="350" cy="290" r="7" style="animation-delay:1.19s"/><text x="350" y="268" text-anchor="middle">Design</text></g><g class="nd"><circle cx="490" cy="236" r="7"/><circle class="halo" cx="490" cy="236" r="7" style="animation-delay:1.61s"/><text x="490" y="214" text-anchor="middle">Strategy</text></g><g class="nd"><circle cx="630" cy="196" r="7"/><circle class="halo" cx="630" cy="196" r="7" style="animation-delay:2.03s"/><text x="630" y="174" text-anchor="middle">Management</text></g><g class="nd"><circle cx="770" cy="132" r="7"/><circle class="halo" cx="770" cy="132" r="7" style="animation-delay:2.45s"/><text x="770" y="110" text-anchor="middle">Analytics</text></g>
+          <g class="burst"><path d="M952 30 L968 6 L940 12 Z" class="tip"/><circle cx="900" cy="58" r="9"/><text x="888" y="22" text-anchor="end">No limits ↗</text></g>
+          <line class="axis" x1="30" x2="980" y1="400" y2="400"/>
+        </svg>
+        <div class="g-foot">
+          <span class="mono">Industries</span>
+          <div class="ticker" aria-hidden="true"><div class="tk"><span>EdTech</span><span>Fintech</span><span>LegalTech</span><span>AgriTech</span><span>Renewable energy</span><span>MarTech</span><span>Ecommerce</span><span>B2B SaaS</span><span>Digital identity</span><span>Financial services</span><span>Utilities</span><span>Creator economy</span><span>AI</span><span>EdTech</span><span>Fintech</span><span>LegalTech</span><span>AgriTech</span><span>Renewable energy</span><span>MarTech</span><span>Ecommerce</span><span>B2B SaaS</span><span>Digital identity</span><span>Financial services</span><span>Utilities</span><span>Creator economy</span><span>AI</span></div></div>
+        </div>
+      </figure>
     </div>
   </section>
 
