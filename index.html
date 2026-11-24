@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ifedubem Ezike Portfolio</title>
-<meta name="description" content="Ifedubem Ezike, Product Designer and Manager in Lagos, Nigeria. The story of 5+ years building products across Africa, Asia, the UAE and Europe.">
+<meta name="description" content="Ifedubem Ezike, product designer, product manager and analyst in Lagos, Nigeria, working across product, design, management, analysis and startups. The story of 5+ years building products across Africa, Asia, the UAE and Europe.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -325,6 +325,23 @@ ul.ast.tight { gap: 4px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .pre { opacity: 1; transform: none; }
 }
+
+/* role fit + industries */
+.tracks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tracks span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+.fit { padding: clamp(40px, 6vw, 80px) 0 clamp(10px, 2vw, 20px); }
+.fitgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 32px; }
+@media (max-width: 1000px) { .fitgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .fitgrid { grid-template-columns: 1fr; } }
+.fc { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: grid; gap: 8px; align-content: start; transition: transform .3s var(--ease), border-color .2s; }
+.fc:hover { transform: translateY(-4px); border-color: var(--accent); }
+.fc .fn { font-family: var(--f-mono); font-size: 12px; color: var(--accent); }
+.fc b { font-family: var(--f-display); font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+.fc p { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+.ind { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.ind span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.card p.indl { font-size: 13.5px; color: var(--ink); font-weight: 500; margin-top: -4px; }
+.card p.indl span { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-right: 8px; font-weight: 400; }
 </style>
 </head>
 <body>
@@ -333,6 +350,7 @@ ul.ast.tight { gap: 4px; }
   <div class="wrap">
     <a class="brand" href="#top">Dubem<span>the</span>Dsgnr</a>
     <ul>
+      <li class="opt"><a href="#fit">Fit</a></li>
       <li class="opt"><a href="#prologue">Story</a></li>
       <li><a href="#journey">Journey</a></li>
       <li><a href="#work">Work</a></li>
@@ -350,9 +368,10 @@ ul.ast.tight { gap: 4px; }
   <header class="hero" id="top">
     <div class="wrap">
       <div>
-        <div class="avail mono"><i aria-hidden="true"></i>Lagos, Nigeria · open to remote roles</div>
+        <div class="avail mono"><i aria-hidden="true"></i>Lagos, Nigeria · open to product, design &amp; analysis roles</div>
         <h1><span class="ln"><span>Ifedubem</span></span><span class="ln"><span>Ezike<span class="dot">.</span></span></span></h1>
-        <p class="lede">Product Designer and Product Manager with 5+ years of experience translating <strong>user research and data</strong> into trusted, scalable products for organisations across Africa, Asia, the UAE and Europe.</p>
+        <p class="lede">Product designer, product manager and analyst with 5+ years of experience translating <strong>user research and data</strong> into trusted, scalable products for startups and organisations across Africa, Asia, the UAE and Europe.</p>
+        <div class="tracks"><span>Product</span><span>Design</span><span>Management</span><span>Analysis</span><span>Startups</span></div>
         <div class="cta">
           <a class="btn primary" href="#prologue">Read my story ↓</a>
           <a class="btn" href="#resume">View resume</a>
@@ -366,7 +385,7 @@ ul.ast.tight { gap: 4px; }
         </svg>
         <article class="cred" aria-label="Summary styled as a verifiable credential">
           <div class="mono" style="font-size:10.5px">Verifiable credential</div>
-          <div class="t">Product Designer &amp; Manager</div>
+          <div class="t">Product, Design &amp; Analysis</div>
           <dl>
             <dt>Holder</dt><dd>Ezike Ifedubem Chidera</dd>
             <dt>Experience</dt><dd>5+ years</dd>
@@ -394,6 +413,20 @@ ul.ast.tight { gap: 4px; }
         <div class="logo"><img src="logos/marche.webp" alt="Marche Tropical" style="height:36px"><span class="cc"><img class="flag" src="flags/lu.svg" alt="" aria-hidden="true"></span></div>
         <div class="logo darkplate"><img src="logos/novascope.webp" alt="NovaScope" style="height:28px"><span class="cc"><img class="flag" src="flags/lu.svg" alt="" aria-hidden="true"></span></div>
         <div class="logo"><img src="logos/cloudenergy.webp" alt="Cloud Energy" style="height:34px"><span class="cc"><img class="flag" src="flags/ng.svg" alt="" aria-hidden="true"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fit" id="fit">
+    <div class="wrap">
+      <div class="chap-label mono" data-reveal>Where I fit</div>
+      <h2 class="big" data-reveal>One profile, <em>five ways in.</em></h2>
+      <div class="fitgrid">
+        <div class="fc" data-reveal><span class="fn">01</span><b>Product</b><p>Strategy, roadmaps and discovery. Directed Akowe Legal X from concept to delivery, with Product School training in product strategy and product led growth.</p></div>
+        <div class="fc" data-reveal><span class="fn">02</span><b>Design</b><p>End to end UX, research and usability testing. Led the Akowe Issuance redesign for a 40% lift in core usability.</p></div>
+        <div class="fc" data-reveal><span class="fn">03</span><b>Management</b><p>Cross functional delivery. Guided teams through MVP strategy at IPME Consulting and set up the design operations Akowe runs on.</p></div>
+        <div class="fc" data-reveal><span class="fn">04</span><b>Analysis</b><p>Industrial Mathematics, Business Analytics, SQL and A/B testing. Built the dashboards behind 50% more data informed decisions at Grid.</p></div>
+        <div class="fc" data-reveal><span class="fn">05</span><b>Startups</b><p>Zero to one. Took Aimset and Trainly from discovery to launch ahead of target, started at Hebron Startup Lab, and joined BoostMate's first cohort.</p></div>
       </div>
     </div>
   </section>
@@ -442,6 +475,7 @@ ul.ast.tight { gap: 4px; }
             <div class="place"><span class="mono pl"><img class="flag" src="flags/in.svg" alt="" aria-hidden="true">Bengaluru, India</span><b>Apr 2022 to May 2023</b></div>
             <h3>The factory floor.</h3>
             <p class="role">UI/UX Designer, WorkonGrid</p>
+            <div class="ind"><span>Industrial operations</span><span>Utilities</span><span>B2B SaaS</span></div>
           </div>
           <div class="body" data-reveal>
             <p class="story">My first enterprise users worked in plants and control rooms. At WorkonGrid I owned design for Grid Frontline, a B2B platform that pulled scattered industrial workflows into one place, and built executive dashboards that leaders could read at a glance.</p>
@@ -461,6 +495,7 @@ ul.ast.tight { gap: 4px; }
             <div class="place"><span class="mono pl"><img class="flag" src="flags/ng.svg" alt="" aria-hidden="true">Lagos, Nigeria</span><b>Apr 2023 to now</b></div>
             <h3>Proving what's true.</h3>
             <p class="role">Product Designer, Akowe</p>
+            <div class="ind"><span>EdTech</span><span>Digital identity</span><span>LegalTech</span></div>
           </div>
           <div class="body" data-reveal>
             <p class="story">Then I came home to a harder question: how do you prove something is true online? At Akowe I design credentialing and digital identity products.</p>
@@ -480,6 +515,7 @@ ul.ast.tight { gap: 4px; }
             <div class="place"><span class="mono pl"><img class="flag" src="flags/ch.svg" alt="" aria-hidden="true"><img class="flag" src="flags/ie.svg" alt="" aria-hidden="true"><img class="flag" src="flags/lu.svg" alt="" aria-hidden="true">Switzerland · Ireland · Luxembourg</span><b>2023 to 2025</b></div>
             <h3>Building for Europe from Lagos.</h3>
             <p class="role">Product Manager &amp; Designer, remote</p>
+            <div class="ind"><span>AgriTech</span><span>Sustainable energy</span><span>SaaS</span><span>Ecommerce</span><span>Financial services</span></div>
           </div>
           <div class="body" data-reveal>
             <p class="story">With the BASE Foundation in Switzerland, I designed the Coldtivate Impact Dashboard so cold room operators and farmers could see their numbers in real time.</p>
@@ -505,23 +541,26 @@ ul.ast.tight { gap: 4px; }
           <button class="chip" id="f-all" data-f="all" aria-pressed="true">All</button>
           <button class="chip" id="f-design" data-f="design" aria-pressed="false">Product design</button>
           <button class="chip" id="f-product" data-f="product" aria-pressed="false">Product management</button>
-          <button class="chip" id="f-data" data-f="data" aria-pressed="false">Data</button>
+          <button class="chip" id="f-data" data-f="data" aria-pressed="false">Analysis</button>
           <button class="chip" id="f-build" data-f="build" aria-pressed="false">Web builds</button>
+          <button class="chip" id="f-startup" data-f="startup" aria-pressed="false">Startups</button>
         </div>
       </div>
       <div class="grid" id="projects">
         <article class="card" data-k="design product" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><img src="logos/akowe.png" alt="Akowe" style="height:18px"></span><img class="flag" src="flags/ng.svg" alt="" aria-hidden="true"><span class="mono" title="Nigeria">NG</span></span><span class="meta"><span class="plat" title="Platform: web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Web</span><span class="mono">Credentialing</span></span></div>
           <h3>Akowe Issuance</h3>
+          <p class="indl"><span>Industry</span>EdTech · Digital identity</p>
           <p>A digital credentialing platform that enables schools and institutions to issue secure, verifiable certificates and academic records.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Led the end to end UX redesign, establishing continuous user research loops, streamlining complex issuance workflows and conducting iterative usability testing. The redesign delivered a 40% improvement in core usability metrics.</p>
           <div class="metric">+40%<small>core usability</small></div>
           <div class="tags"><span>UX research</span><span>Redesign</span></div>
           <a class="card-link" href="https://issuance.akowe.app/">Visit issuance.akowe.app ↗</a>
         </article>
-        <article class="card" data-k="design product" data-reveal>
+        <article class="card" data-k="design product startup" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><img src="logos/akowe.png" alt="Akowe" style="height:18px"></span><img class="flag" src="flags/ng.svg" alt="" aria-hidden="true"><span class="mono" title="Nigeria">NG</span></span><span class="meta"><span class="plat" title="Platform: web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Web</span><span class="mono">LegalTech</span></span></div>
           <h3>Akowe Legal X</h3>
+          <p class="indl"><span>Industry</span>LegalTech · Real estate · AI</p>
           <p>An AI assisted legal workflow platform for Nigerian legal practitioners, automating the verification of land title documents in property transactions.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Directed product strategy and design execution from concept to delivery, reducing manual operational overhead by 60%.</p>
           <div class="metric">−60%<small>manual overhead</small></div>
@@ -530,6 +569,7 @@ ul.ast.tight { gap: 4px; }
         <article class="card" data-k="design" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><img src="logos/akowe.png" alt="Akowe" style="height:18px"></span><img class="flag" src="flags/ng.svg" alt="" aria-hidden="true"><span class="mono" title="Nigeria">NG</span></span><span class="meta"><span class="plat" title="Platform: web and mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>Web + Mobile</span><span class="mono">Identity</span></span></div>
           <h3>Akowe Credenza</h3>
+          <p class="indl"><span>Industry</span>EdTech · Digital identity</p>
           <p>A digital credential wallet that gives graduates a single, trusted home for their academic records.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Records are sourced directly from school yearbooks through institutional partnerships, giving graduates a verified academic history without manual uploads. Contributed to the product design of the wallet experience.</p>
           <div class="tags"><span>Wallet</span><span>EdTech</span></div>
@@ -538,6 +578,7 @@ ul.ast.tight { gap: 4px; }
         <article class="card" data-k="design data" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><img src="logos/workongrid.svg" alt="Grid by WorkOnGrid" style="height:18px"></span><img class="flag" src="flags/in.svg" alt="" aria-hidden="true"><span class="mono" title="India">IN</span></span><span class="meta"><span class="plat" title="Platform: web and mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>Web + Mobile</span><span class="mono">B2B SaaS</span></span></div>
           <h3>Grid Frontline</h3>
+          <p class="indl"><span>Industry</span>Industrial operations · Utilities · B2B SaaS</p>
           <p>An enterprise B2B SaaS platform that centralises operational workflows for industrial and utility organisations.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Owned the end to end design strategy, designed executive dashboards and analytics suites, and led usability engineering across product lines. Outcomes included a 60% reduction in task completion time, a 30% reduction in customer wait times and a 50% increase in data informed decision making.</p>
           <div class="metric">+50%<small>data informed decisions</small></div>
@@ -547,15 +588,17 @@ ul.ast.tight { gap: 4px; }
         <article class="card" data-k="design product data" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo dark"><img src="logos/vcca.webp" alt="Your VCCA, home of Coldtivate" style="height:18px"></span><img class="flag" src="flags/ch.svg" alt="" aria-hidden="true"><span class="mono" title="Switzerland">CH</span></span><span class="meta"><span class="plat" title="Platform: web and mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>Web + Mobile</span><span class="mono">AgriTech</span></span></div>
           <h3>Coldtivate Impact Dashboard</h3>
+          <p class="indl"><span>Industry</span>AgriTech · Cold chain · Sustainable energy</p>
           <p>A real time impact dashboard for Coldtivate, enabling cold room operators and farmers to monitor key performance indicators and operational metrics. Developed in collaboration with the BASE Foundation.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Led user research, A/B testing and analytics, gathered business requirements and translated insights into product enhancements, improving UX and adoption rates by 15%.</p>
           <div class="metric">+15%<small>UX and adoption</small></div>
           <div class="tags"><span>A/B testing</span><span>Data viz</span></div>
           <a class="card-link" href="https://yourvcca.org/coldtivate/">Visit yourvcca.org/coldtivate ↗</a>
         </article>
-        <article class="card" data-k="product" data-reveal>
+        <article class="card" data-k="product startup" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><b>IPME</b></span><img class="flag" src="flags/ie.svg" alt="" aria-hidden="true"><span class="mono" title="Ireland">IE</span></span><span class="meta"><span class="plat" title="Platform: web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Web</span><span class="mono">MVP</span></span></div>
           <h3>Aimset &amp; Trainly</h3>
+          <p class="indl"><span>Industry</span>SaaS · Consulting</p>
           <p>Two early stage SaaS ventures within the IPME Consulting portfolio.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Led product discovery and portfolio analysis using Kano and Value Proposition models, defined user architecture and service blueprints, and guided cross functional teams through MVP strategy and rapid hypothesis testing. Both products launched ahead of target milestones, with a 25% improvement in user satisfaction benchmarks.</p>
           <div class="metric">+25%<small>user satisfaction</small></div>
@@ -564,6 +607,7 @@ ul.ast.tight { gap: 4px; }
         <article class="card" data-k="design build" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><img src="logos/cloudenergy.webp" alt="Cloud Energy" style="height:22px"></span><img class="flag" src="flags/ng.svg" alt="" aria-hidden="true"><span class="mono" title="Nigeria">NG</span></span><span class="meta"><span class="plat" title="Platform: web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Web</span><span class="mono">Solar energy</span></span></div>
           <h3>Cloud Energy website</h3>
+          <p class="indl"><span>Industry</span>Renewable energy · Solar</p>
           <p>A comprehensive website redesign for Cloud Energy, a Nigerian provider of solar panels, inverters and energy storage solutions.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Redesigned the landing page and core site architecture across Home, About, Products, Solutions, Storage, Projects, Services, Partners and Contact, aligned with the brand identity. Developed and deployed the site on Vercel through a GitHub workflow.</p>
           <div class="tags"><span>Web design</span><span>Landing page</span><span>Energy</span></div>
@@ -572,14 +616,16 @@ ul.ast.tight { gap: 4px; }
         <article class="card" data-k="design product build" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><img src="logos/marche.webp" alt="Marche Tropical" style="height:22px"></span><img class="flag" src="flags/lu.svg" alt="" aria-hidden="true"><span class="mono" title="Luxembourg">LU</span></span><span class="meta"><span class="plat" title="Platform: web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Web</span><span class="mono">Ecommerce</span></span></div>
           <h3>Marche Tropical</h3>
+          <p class="indl"><span>Industry</span>Ecommerce · Food retail</p>
           <p>An ecommerce platform for Marche Tropical, a Luxembourg retailer of tropical produce, built on Odoo.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Led design and development to improve user journeys and customer engagement, implemented real time inventory management that reduced stockouts, and conducted user acceptance testing and debugging to optimise system performance.</p>
           <div class="tags"><span>Odoo</span><span>UAT</span></div>
           <a class="card-link" href="https://www.marchetropical.lu/">Visit marchetropical.lu ↗</a>
         </article>
-        <article class="card" data-k="product" data-reveal>
+        <article class="card" data-k="product startup" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo"><img src="logos/boostmate.webp" alt="BoostMate" style="height:16px"></span><img class="flag" src="flags/gh.svg" alt="" aria-hidden="true"><span class="mono" title="Ghana">GH</span></span><span class="meta"><span class="plat" title="Platform: web and mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>Web + Mobile</span><span class="mono">2026</span></span></div>
           <h3>BoostMate</h3>
+          <p class="indl"><span>Industry</span>MarTech · Creator economy · AI</p>
           <p>An AI powered UGC and ambassador marketing platform connecting African brands with everyday creators, known as Boosters, who complete brand missions.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Drives product quality as a Product QA &amp; Feature Testing Intern in the inaugural cohort. Designs and runs functional, regression and exploratory test cases across creator and brand journeys on web and mobile, and maintains a severity ranked defect log that gives product and engineering a prioritized backlog.</p>
           <div class="tags"><span>Product QA</span><span>Regression testing</span><span>Defect triage</span></div>
@@ -588,6 +634,7 @@ ul.ast.tight { gap: 4px; }
         <article class="card" data-k="build" data-reveal>
           <div class="top"><span class="co"><span class="chip-logo dark"><img src="logos/novascope.webp" alt="NovaScope" style="height:16px"></span><img class="flag" src="flags/lu.svg" alt="" aria-hidden="true"><span class="mono" title="Luxembourg">LU</span></span><span class="meta"><span class="plat" title="Platform: web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Web</span><span class="mono">Fintech</span></span></div>
           <h3>NovaScope</h3>
+          <p class="indl"><span>Industry</span>Financial services · Advisory</p>
           <p>The corporate website for NovaScope, a Luxembourg firm providing management and fractional CFO services to growing businesses.</p>
           <p class="more"><span class="role-l">Role &amp; impact</span>Built and deployed the site on WordPress, using the IONOS AI Website Builder to design and structure the service pages.</p>
           <div class="tags"><span>WordPress</span><span>Web</span></div>
