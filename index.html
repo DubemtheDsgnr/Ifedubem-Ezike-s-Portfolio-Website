@@ -417,6 +417,33 @@ ul.ast.tight { gap: 4px; }
 @keyframes g2fade { 0%, 35% { opacity: 0; } 55%, 94% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes g2pop { 0% { opacity: 0; transform: translateY(10px); } 6%, 88% { opacity: 1; transform: none; } 94%, 100% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .g2 .ln, .g2 .area, .g2 .tip, .g2 .gc, .g2 .nl { animation: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; } }
+
+/* professional summary */
+.summary { padding: clamp(48px, 7vw, 96px) 0 clamp(10px, 2vw, 24px); }
+.summary .big em { font-style: normal; color: var(--accent); }
+.sum-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(24px, 4vw, 56px); margin-top: 36px; align-items: start; }
+@media (max-width: 900px) { .sum-grid { grid-template-columns: 1fr; } }
+.sum-text p { font-size: clamp(16px, 1.4vw, 18px); line-height: 1.7; color: var(--muted); margin: 0 0 14px; max-width: 680px; }
+.sum-text .sum-lead { font-family: var(--f-display); font-size: clamp(22px, 2.2vw, 28px); line-height: 1.3; color: var(--ink); letter-spacing: -.015em; font-weight: 600; }
+.sum-text strong { color: var(--accent); }
+.sum-bring { list-style: none; padding: 0; margin: 26px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .sum-bring { grid-template-columns: 1fr; } }
+.sum-bring li { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--surface); display: grid; gap: 4px; }
+.sum-bring b { font-family: var(--f-display); font-size: 17px; }
+.sum-bring span { font-size: 14px; color: var(--muted); line-height: 1.5; }
+.sum-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.sp { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; border-top: 4px solid var(--accent); display: grid; gap: 4px; }
+.sp:nth-child(4) { border-top-color: var(--verify); }
+.sp b { font-family: var(--f-display); font-weight: 800; font-size: clamp(40px, 4vw, 54px); letter-spacing: -.04em; line-height: 1; }
+.sp span { font-weight: 600; font-size: 15px; }
+.sp small { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.sum-cta { margin-top: 28px; background: var(--ink); color: #fff; border-radius: 22px; padding: clamp(22px, 3vw, 34px); display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.sum-cta .mono { color: #8C98B3; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.sum-cta p { margin: 6px 0 0; font-family: var(--f-display); font-size: clamp(20px, 2.2vw, 28px); font-weight: 700; letter-spacing: -.02em; }
+.sum-cta .sc-l { color: #8FA2FF; }
+.sum-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.sum-cta .btn { border-color: rgba(255,255,255,.35); color: #fff; }
+.sum-cta .btn.primary { background: var(--accent); border-color: var(--accent); }
 </style>
 </head>
 <body>
@@ -425,6 +452,7 @@ ul.ast.tight { gap: 4px; }
   <div class="wrap">
     <a class="brand" href="#top">Dubem<span>the</span>Dsgnr</a>
     <ul>
+      <li class="opt"><a href="#summary">Summary</a></li>
       <li class="opt"><a href="#fit">Fit</a></li>
       <li class="opt"><a href="#prologue">Story</a></li>
       <li><a href="#journey">Journey</a></li>
@@ -450,6 +478,7 @@ ul.ast.tight { gap: 4px; }
         <div class="cta">
           <a class="btn primary" href="#prologue">Read my story ↓</a>
           <a class="btn" href="#resume">View resume</a>
+          <a class="btn" href="mailto:ezidubem14@gmail.com?subject=Let%27s%20work%20together">Let's work together ↗</a>
         </div>
       </div>
       <div class="portrait">
@@ -488,6 +517,40 @@ ul.ast.tight { gap: 4px; }
         <div class="logo"><img src="logos/marche.webp" alt="Marche Tropical" style="height:36px"><span class="cc"><img class="flag" src="flags/lu.svg" alt="" aria-hidden="true"></span></div>
         <div class="logo darkplate"><img src="logos/novascope.webp" alt="NovaScope" style="height:28px"><span class="cc"><img class="flag" src="flags/lu.svg" alt="" aria-hidden="true"></span></div>
         <div class="logo"><img src="logos/cloudenergy.webp" alt="Cloud Energy" style="height:34px"><span class="cc"><img class="flag" src="flags/ng.svg" alt="" aria-hidden="true"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="summary" id="summary">
+    <div class="wrap">
+      <div class="chap-label mono" data-reveal>Professional summary</div>
+      <h2 class="big" data-reveal>I turn research and data into products that <em>grow.</em></h2>
+      <div class="sum-grid">
+        <div class="sum-text" data-reveal>
+          <p class="sum-lead">Product Designer and Manager with <strong>5+ years</strong> of experience building solutions with data and user research.</p>
+          <p>I have led teams across SaaS, Fintech, EdTech, LegalTech, AgriTech, AI, Ecommerce and Digital Credentialing. I set design direction, turn research and analytics into clear product decisions, and take products from strategy to launch.</p>
+          <p>My work has improved usability, increased engagement and supported business growth for companies in Africa, Asia, the UAE and Europe.</p>
+          <ul class="sum-bring">
+            <li><b>Design direction</b><span>A clear, consistent product experience from first sketch to final pixel.</span></li>
+            <li><b>Decisions from evidence</b><span>User research, analytics and testing that settle debates fast.</span></li>
+            <li><b>Strategy to launch</b><span>Roadmaps, discovery and cross functional delivery that ships on time.</span></li>
+            <li><b>Growth you can measure</b><span>Better usability, higher engagement and outcomes the business can see.</span></li>
+          </ul>
+        </div>
+        <div class="sum-proof" data-reveal>
+          <div class="sp"><b>40%</b><span>lift in core usability</span><small>Akowe Issuance</small></div>
+          <div class="sp"><b>60%</b><span>less manual overhead</span><small>Akowe Legal X</small></div>
+          <div class="sp"><b>60%</b><span>faster task completion</span><small>Grid Frontline</small></div>
+          <div class="sp"><b>25%</b><span>higher user satisfaction</span><small>IPME Consulting</small></div>
+        </div>
+      </div>
+      <div class="sum-cta" data-reveal>
+        <div><span class="mono">For recruiters, founders and CEOs</span><p>Building something people need to trust? <span class="sc-l">Let's work together.</span></p></div>
+        <div class="sum-btns">
+          <a class="btn primary" href="mailto:ezidubem14@gmail.com?subject=Let%27s%20work%20together">Let's work together ↗</a>
+          <a class="btn" href="#resume">View resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/ifedubemezike/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+        </div>
       </div>
     </div>
   </section>
@@ -881,7 +944,7 @@ ul.ast.tight { gap: 4px; }
 
       <section class="rs">
         <h2>Professional summary</h2>
-        <p>Product Designer &amp; Manager with 5+ years of experience leading teams to build products that solve problems, across SaaS, EdTech, Fintech, LegalTech, AgriTech, Ecommerce, AI, Digital Credentialing, Industrial Operations, and many more. I set design direction, make decisions based on research and data, and guide projects from strategy to launch. My work has made products easier to use and helped businesses grow in Africa, Asia, the UAE, and Europe.</p>
+        <p>Product Designer and Manager with 5+ years of experience building solutions with data and user research. I have led teams across SaaS, Fintech, EdTech, LegalTech, AgriTech, AI, Ecommerce, and Digital Credentialing. I set design direction, turn research and analytics into clear product decisions, and take products from strategy to launch. My work has improved usability, increased engagement, and supported business growth for companies in Africa, Asia, the UAE, and Europe.</p>
       </section>
 
       <section class="rs">
